@@ -6,8 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "DAO Automation Hub",
-  description: "Modern DAO governance and automation dashboard",
+  title: "AI Treasurer DAO Dashboard",
+  description: "Advanced DAO governance powered by JuliaOS AI agents",
 }
 
 export default function RootLayout({

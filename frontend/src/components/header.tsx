@@ -1,10 +1,16 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Wallet, Zap, Menu } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Wallet, Zap, Menu, Wifi, WifiOff } from "lucide-react"
 import { useState } from "react"
+import type { ChainInfo } from "@/types"
 
-export function Header() {
+interface HeaderProps {
+  chainInfo: ChainInfo
+}
+
+export function Header({ chainInfo }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
@@ -16,14 +22,33 @@ export function Header() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                DAO Automation Hub
-              </h1>
+              <div className="flex flex-col">
+                <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  AI Treasurer DAO
+                </h1>
+                <span className="text-xs text-slate-500 hidden sm:block">Powered by JuliaOS Agents</span>
+              </div>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden sm:flex items-center space-x-4">
+            <Badge
+              variant="outline"
+              className={`${
+                chainInfo.status === "connected"
+                  ? "border-green-500/30 bg-green-500/10 text-green-400"
+                  : "border-red-500/30 bg-red-500/10 text-red-400"
+              }`}
+            >
+              {chainInfo.status === "connected" ? (
+                <Wifi className="w-3 h-3 mr-1" />
+              ) : (
+                <WifiOff className="w-3 h-3 mr-1" />
+              )}
+              <span className="hidden md:inline">{chainInfo.name} </span>
+              {chainInfo.network}
+            </Badge>
             <Button variant="outline" size="sm" className="border-slate-700 bg-slate-800/50 hover:bg-slate-700/50">
               <Wallet className="w-4 h-4 mr-2" />
               <span className="hidden md:inline">Connect Wallet</span>
@@ -46,7 +71,22 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="sm:hidden mt-4 pt-4 border-t border-slate-800/50">
+          <div className="sm:hidden mt-4 pt-4 border-t border-slate-800/50 space-y-3">
+            <Badge
+              variant="outline"
+              className={`${
+                chainInfo.status === "connected"
+                  ? "border-green-500/30 bg-green-500/10 text-green-400"
+                  : "border-red-500/30 bg-red-500/10 text-red-400"
+              }`}
+            >
+              {chainInfo.status === "connected" ? (
+                <Wifi className="w-3 h-3 mr-1" />
+              ) : (
+                <WifiOff className="w-3 h-3 mr-1" />
+              )}
+              {chainInfo.name} {chainInfo.network}
+            </Badge>
             <Button
               variant="outline"
               size="sm"

@@ -9,9 +9,10 @@ import type { Proposal } from "@/types"
 
 interface ProposalsTableProps {
   proposals: Proposal[]
+  onProposalClick: (proposal: Proposal) => void
 }
 
-export function ProposalsTable({ proposals }: ProposalsTableProps) {
+export function ProposalsTable({ proposals, onProposalClick }: ProposalsTableProps) {
   return (
     <Card className="bg-slate-900/50 border-slate-800/50 backdrop-blur-xl shadow-2xl">
       <CardHeader>
@@ -21,7 +22,7 @@ export function ProposalsTable({ proposals }: ProposalsTableProps) {
               <Vote className="w-5 h-5 mr-2 text-cyan-400" />
               Active Proposals
             </CardTitle>
-            <CardDescription className="text-slate-400">Manage and vote on DAO governance proposals</CardDescription>
+            <CardDescription className="text-slate-400">AI-analyzed governance proposals with insights</CardDescription>
           </div>
           <Button
             size="sm"
@@ -38,7 +39,8 @@ export function ProposalsTable({ proposals }: ProposalsTableProps) {
           {proposals.map((proposal) => (
             <div
               key={proposal.id}
-              className="p-4 rounded-lg border border-slate-800/50 bg-slate-800/20 hover:bg-slate-800/40 transition-colors"
+              className="p-4 rounded-lg border border-slate-800/50 bg-slate-800/20 hover:bg-slate-800/40 transition-colors cursor-pointer"
+              onClick={() => onProposalClick(proposal)}
             >
               <div className="space-y-3">
                 <div className="flex items-start justify-between">
@@ -84,7 +86,11 @@ export function ProposalsTable({ proposals }: ProposalsTableProps) {
             </TableHeader>
             <TableBody>
               {proposals.map((proposal) => (
-                <TableRow key={proposal.id} className="border-slate-800/50 hover:bg-slate-800/30 transition-colors">
+                <TableRow
+                  key={proposal.id}
+                  className="border-slate-800/50 hover:bg-slate-800/30 transition-colors cursor-pointer"
+                  onClick={() => onProposalClick(proposal)}
+                >
                   <TableCell className="py-4">
                     <div className="space-y-1">
                       <div className="font-medium text-white">{proposal.title}</div>
