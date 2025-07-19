@@ -1,0 +1,29 @@
+[
+  {
+    "id": "PROP-001",
+    "title": "Increase Marketing Budget",
+    "description": "Allocate additional 50,000 USDC to expand community reach.",
+    "type": "Treasury",
+    "status": "Active",
+    "votes": 1247,
+    "timeLeft": "2 days"
+  },
+  {
+    "id": "PROP-002",
+    "title": "New Partnership with DeFi Protocol",
+    "description": "Strategic partnership proposal with leading DeFi protocol for yield optimization.",
+    "type": "Partnership",
+    "status": "Pending",
+    "votes": 892,
+    "timeLeft": "5 days"
+  },
+  {
+    "id": "PROP-003",
+    "title": "Governance Token Burn Mechanism",
+    "description": "Implement quarterly token burn based on protocol revenue to increase token value.",
+    "type": "Tokenomics",
+    "status": "Active",
+    "votes": 2156,
+    "timeLeft": "1 day"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "totalValue": 2847392,
+  "monthlyBurn": 127450,
+  "runwayMonths": 22,
+  "changePercent": 12.5,
+  "assetAllocation": {
+    "USDC": 44,
+    "ETH": 31,
+    "DAO Token": 16,
+    "Other": 9
+  }
+}
