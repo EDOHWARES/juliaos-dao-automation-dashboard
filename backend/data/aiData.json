@@ -1,0 +1,85 @@
+{
+  "agents": [
+    {
+      "id": "julia-analyzer",
+      "name": "Proposal Analyzer",
+      "type": "analyzer",
+      "status": "active",
+      "lastUpdate": "2 minutes ago"
+    },
+    {
+      "id": "julia-risk",
+      "name": "Treasury Risk Calculator",
+      "type": "risk",
+      "status": "active",
+      "lastUpdate": "1 minute ago"
+    },
+    {
+      "id": "julia-advisor",
+      "name": "Voting Advisor",
+      "type": "advisor",
+      "status": "processing",
+      "lastUpdate": "30 seconds ago"
+    }
+  ],
+  "insights": [
+    {
+      "agentId": "julia-analyzer",
+      "proposalId": "PROP-001",
+      "type": "summary",
+      "content": "This marketing proposal shows strong strategic alignment with DAO growth objectives. The budget allocation is reasonable and targets high-impact channels. Expected ROI of 3.2x based on historical data.",
+      "confidence": 87,
+      "timestamp": "2024-01-16T10:30:00Z"
+    },
+    {
+      "agentId": "julia-risk",
+      "proposalId": "PROP-001",
+      "type": "risk",
+      "content": "Low financial risk. The requested 50K USDC represents 1.8% of total treasury. Current burn rate can accommodate this expense without affecting runway significantly.",
+      "score": 23,
+      "confidence": 92,
+      "timestamp": "2024-01-16T10:32:00Z"
+    },
+    {
+      "agentId": "julia-advisor",
+      "proposalId": "PROP-001",
+      "type": "recommendation",
+      "content": "RECOMMENDED: Strong business case with measurable KPIs. Marketing spend aligns with growth phase requirements and community expansion goals.",
+      "recommendation": "YES",
+      "confidence": 89,
+      "timestamp": "2024-01-16T10:35:00Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "ai-001",
+      "title": "High Engagement Detected",
+      "description": "Proposal PROP-003 showing 40% higher engagement than average. Julia recommends expediting the voting process.",
+      "type": "engagement",
+      "icon": "Activity",
+      "priority": "high",
+      "agentSource": "Julia Analyzer",
+      "confidence": 94
+    },
+    {
+      "id": "ai-002",
+      "title": "Treasury Optimization Alert",
+      "description": "Risk Calculator suggests diversifying 15% of USDC into yield-bearing assets. Potential 4.2% APY increase.",
+      "type": "treasury",
+      "icon": "TrendingUp",
+      "priority": "medium",
+      "agentSource": "Julia Risk Calculator",
+      "confidence": 87
+    },
+    {
+      "id": "ai-003",
+      "title": "Voting Pattern Analysis",
+      "description": "Advisor detected unusual voting patterns on treasury proposals. Recommending enhanced due diligence.",
+      "type": "community",
+      "icon": "Users",
+      "priority": "high",
+      "agentSource": "Julia Voting Advisor",
+      "confidence": 91
+    }
+  ]
+}

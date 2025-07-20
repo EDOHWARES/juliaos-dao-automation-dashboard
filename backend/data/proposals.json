@@ -2,28 +2,38 @@
   {
     "id": "PROP-001",
     "title": "Increase Marketing Budget",
-    "description": "Allocate additional 50,000 USDC to expand community reach.",
-    "type": "Treasury",
+    "description": "Allocate additional 60,000 USDC for Q1 marketing initiatives to expand community reach",
+    "fullDescription": "This proposal requests an allocation of 50,000 USDC from the treasury to fund comprehensive marketing initiatives for Q1 2024. The funds will be distributed across: 1) Social media advertising campaigns (60%), 2) Influencer partnerships (25%), 3) Content creation and community events (15%). Expected outcomes include 40% increase in community engagement and 25% growth in active governance participants.",
     "status": "Active",
     "votes": 1247,
-    "timeLeft": "2 days"
+    "timeLeft": "2 days",
+    "type": "Treasury",
+    "requestedAmount": "50,000 USDC",
+    "proposer": "0x742d35Cc6634C0532925a3b8D4C9db96590b5",
+    "createdAt": "2024-01-15T10:30:00Z"
   },
   {
     "id": "PROP-002",
     "title": "New Partnership with DeFi Protocol",
-    "description": "Strategic partnership proposal with leading DeFi protocol for yield optimization.",
-    "type": "Partnership",
+    "description": "Strategic partnership proposal with leading DeFi protocol for yield optimization",
+    "fullDescription": "Establish a strategic partnership with Compound Finance to optimize treasury yield generation. This partnership will involve depositing 30% of USDC reserves into Compound's lending pools, generating an estimated 4.2% APY. The partnership includes governance token exchange and joint marketing initiatives.",
     "status": "Pending",
     "votes": 892,
-    "timeLeft": "5 days"
+    "timeLeft": "5 days",
+    "type": "Partnership",
+    "proposer": "0x8ba1f109551bD432803012645Hac136c0532925",
+    "createdAt": "2024-01-12T14:20:00Z"
   },
   {
     "id": "PROP-003",
     "title": "Governance Token Burn Mechanism",
-    "description": "Implement quarterly token burn based on protocol revenue to increase token value.",
-    "type": "Tokenomics",
+    "description": "Implement quarterly token burn based on protocol revenue to increase token value",
+    "fullDescription": "Implement an automated token burn mechanism that burns 25% of quarterly protocol revenue in DAO tokens. This deflationary mechanism will reduce total supply over time, potentially increasing token value for holders. The burn will occur automatically via smart contract every 90 days.",
     "status": "Active",
     "votes": 2156,
-    "timeLeft": "1 day"
+    "timeLeft": "1 day",
+    "type": "Tokenomics",
+    "proposer": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    "createdAt": "2024-01-10T09:15:00Z"
   }
 ]

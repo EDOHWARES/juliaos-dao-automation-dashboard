@@ -1,12 +1,19 @@
 {
-  "totalValue": 2847392,
-  "monthlyBurn": 127450,
-  "runwayMonths": 22,
-  "changePercent": 12.5,
-  "assetAllocation": {
-    "USDC": 44,
-    "ETH": 31,
-    "DAO Token": 16,
-    "Other": 9
-  }
+  "totalValue": "$2,847,392",
+  "assets": [
+    { "name": "USDC", "amount": "1,247,392", "percentage": 44, "color": "bg-blue-500" },
+    { "name": "ETH", "amount": "892.5", "percentage": 31, "color": "bg-purple-500" },
+    { "name": "DAO Token", "amount": "450,000", "percentage": 16, "color": "bg-cyan-500" },
+    { "name": "Other", "amount": "Mixed", "percentage": 9, "color": "bg-green-500" }
+  ],
+  "monthlyBurn": "$127,450",
+  "runway": "22 months",
+  "forecastData": [
+    { "month": "Jan", "remaining": 2847, "burn": 127, "projected": 2720 },
+    { "month": "Feb", "remaining": 2720, "burn": 135, "projected": 2585 },
+    { "month": "Mar", "remaining": 2585, "burn": 142, "projected": 2443 },
+    { "month": "Apr", "remaining": 2443, "burn": 128, "projected": 2315 },
+    { "month": "May", "remaining": 2315, "burn": 156, "projected": 2159 },
+    { "month": "Jun", "remaining": 2159, "burn": 134, "projected": 2025 }
+  ]
 }
